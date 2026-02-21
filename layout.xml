@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout orientation="portrait" scroll="none">
+  <!-- Row 1 -->
+  <row>
+    <button text="-" ontap="zoom_out" />
+    <button text="↑" ontap="mouse_up" />
+    <button text="+" ontap="zoom_in" />
+  </row>
+
+  <!-- Row 2 -->
+  <row>
+    <button text="←" ontap="mouse_left" />
+    <button text="⊞" ontap="super_key" />
+    <button text="→" ontap="mouse_right" />
+  </row>
+
+  <!-- Row 3 -->
+  <row>
+    <button text="" ontap="noop" />
+    <button text="↓" ontap="mouse_down" />
+    <button text="Exit" ontap="exit_magnifier" />
+  </row>
+
+  <!-- Row 4 (blank for muscle memory) -->
+  <row>
+    <button text="" ontap="noop" />
+    <button text="" ontap="noop" />
+    <button text="" ontap="noop" />
+  </row>
+</layout>

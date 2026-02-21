@@ -1,0 +1,5 @@
+meta.name: magnifier
+meta.author: Bradyns
+meta.description: X11 magnifier (xdotool) - zoom + mouse nudge
+meta.tags.category: accessibility
+meta.tags: x11, xdotool, zoom, magnifier

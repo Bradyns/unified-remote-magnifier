@@ -12,6 +12,7 @@ local KEY_ZOOM_IN  = "Super_L+equal"   -- "+" is usually Shift+"="; xdotool ofte
 local KEY_ZOOM_OUT = "Super_L+minus"
 local KEY_EXIT     = "Super_L+0"
 local KEY_SUPER    = "Super_L"
+local KEY_RESET    = "Alt_L+Shift_L+F12"
 -- =========================
 
 local function sh(cmd)
@@ -30,6 +31,10 @@ end
 
 actions.noop = function()
   -- intentionally blank
+end
+
+actions.blank = function()
+  -- intentionally blank (layout spacer)
 end
 
 actions.zoom_in = function()
@@ -62,4 +67,10 @@ end
 
 actions.exit_magnifier = function()
   key(KEY_EXIT)
+end
+
+actions.reset_magnifier = function()
+  -- Some setups need this combo twice to fully reset.
+  key(KEY_RESET)
+  key(KEY_RESET)
 end

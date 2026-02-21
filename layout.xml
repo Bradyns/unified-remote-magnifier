@@ -16,15 +16,15 @@
 
   <!-- Row 3 -->
   <row>
-    <button text="" ontap="noop" />
+    <button text="⟳" ontap="reset_magnifier" />
     <button text="↓" ontap="mouse_down" />
     <button text="Exit" ontap="exit_magnifier" />
   </row>
 
   <!-- Row 4 (blank for muscle memory) -->
   <row>
-    <button text="" ontap="noop" />
-    <button text="" ontap="noop" />
-    <button text="" ontap="noop" />
+    <button text="" ontap="blank" />
+    <button text="" ontap="blank" />
+    <button text="" ontap="blank" />
   </row>
 </layout>

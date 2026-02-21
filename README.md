@@ -11,8 +11,9 @@ Due to the behaviour of **Wayland**, I swapped to **X11** to get the keyboard wo
 ## What it does
 
 - Sends zoom in/out/exit key actions through `xdotool`
-- Nudges the mouse in fixed steps
+- Nudges the mouse directionally in fixed steps
 - Includes a dedicated Super key action
+- Includes a button to refresh the zoom if it bugs out.
 - Several unused buttons that could be customized for additional functionality
 
 ## Requirements
@@ -21,13 +22,24 @@ Due to the behaviour of **Wayland**, I swapped to **X11** to get the keyboard wo
 - `xdotool` installed on the host machine
   - Project: https://github.com/jordansissel/xdotool
 
-    ### Installation
-    You may find xdotool in your distribution packaging:
-        - Debian and Ubuntu: `apt-get install xdotool`
-        - Fedora: `dnf install xdotool`
-        - FreeBSD: `pkg install xdotool`
-        - macOS: `brew install xdotool` or `sudo port install xdotool`
-        - OpenSUSE: `zypper install xdotool`
+
+## Installation
+
+Make sure you have the requirements installed and make sure your Unified Remote server is [running](http://localhost:9510/web/).
+
+Place this remote in your Unified Remote custom remotes folder on the Linux host:
+
+```text
+~/.urserver/
+└── remotes/
+    └── custom/
+        └── magnifier/
+            ├── meta.prop
+            ├── remote.lua
+            └── layout.xml
+```
+
+After copying the files, restart the Unified Remote server (or reload remotes) so it appears in the app.
 
 ## Tested environment
 
@@ -42,11 +54,6 @@ Due to the behaviour of **Wayland**, I swapped to **X11** to get the keyboard wo
 Remote shown in the Unified Remotes iOS app:
 
 ![Unified Remote iOS screenshot](example.png)
-
-## Known issues
-
-Sometimes when opening the remote and zooming in, the mouse will move but the window will be stuck.
-You have to press `Alt+Shift+F12` twice to reset the zoom and mouse position, then it will work again.
 
 
 ## License
